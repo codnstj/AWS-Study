@@ -23,7 +23,15 @@ Got permission denied while trying to connect to the Docker daemon socket at uni
 [ec2-user@ip---]$ docker pull cptactionhank/atlassian-jira-software:latest
 
 // 지라 도커 컨테이너 생성
-[ec2-user@ip---]$ docker create --restart=no --name "jira-container" \ --publish "8080:8080" \ --volume "hostpath:/var/atlassian/jira" \ --env "CATALINA_OPTS= -Xms1024m -Xmx1024m -Datlassian.plugin.enable.wait=300" \ cptactionhank/atlassian-jira-software:latest
+[ec2-user@ip---]$ docker create --restart=no --name "jira-container"\
+ --publish "8080:8080"\
+ --volume "hostpath:/var/atlassian/jira"\
+ --env "CATALINA_OPTS= -Xms1024m -Xmx1024m -Datlassian.plugins.enable.wait=300"\
+ cptactionhank/atlassian-jira-software:latest
+
+                    or
+                    
+ [ec2-user@ip---]$ docker create --restart=no --name "jira-container" --publish "8080:8080" --volume "hostpath:/var/atlassian/jira" --env "CATALINA_OPTS= -Xms1024m -Xmx1024m -Datlassian.plugins.enable.wait=300" cptactionhank/atlassian-jira-software:latest
 
 //지라 도커 컨테이너 실행
 [ec2-user@ip---]$ docker start --attach "jira-container"
