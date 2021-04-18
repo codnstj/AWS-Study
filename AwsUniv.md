@@ -7,14 +7,29 @@
 ```
 
 > EC2
+
 - 서버 클라우드 서비스 (메모리) 제공
 - 서버 라이선스 제공
-RDS
-ELB
-VPC
-Cloud Front
-S3
-IAM => AWS 계정 분배
+
+>RDS
+
+- 데이터 베이스 서버 
+- 관리형 관계형 데이터베이스 를 제공
+
+> ELB
+
+- 트레픽 분산 
+
+>VPC
+
+- 가상 의 분리된 네트워크로써 사용할수 있게 해준다.
+  
+>Cloud Front
+
+> S3
+- 구글 드라이브 같이 
+
+> IAM => AWS 계정 분배
 가용성 => 가용 영역
 watchcloud
 
@@ -23,8 +38,7 @@ watchcloud
 : EC2 + RDS + watchcloud + 
 (t2.xlarge) + (?요금측정 실행)
 
-
 or 
 
 오토 스케일링       +       WatchCloud    +     
-(EC2 + RDS)              ()
+(EC2 + RDS)              ()                  
