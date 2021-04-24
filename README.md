@@ -7,4 +7,4 @@
 <img src="./aws.png">
 
 - 현재 목표 완성본
-<img src="./first-draft.png">
+<img src="./last-draft.png">
